@@ -149,8 +149,8 @@ button {
     .content-wrapper .price, .content-wrapper .content-form {
         margin-right: 10rem;
     }
-    .content-wrapper p {
-        font-size: 0.7rem;
+    .content-wrapper .price p {
+        font-size: 0.9rem;
     }
     .content-form {
         padding: 2rem;
