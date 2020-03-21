@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+    --root-font-size: 16px;
+    --root-font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    --root-font-weight-small: 400;
+    --root-font-weight-small-medium: 500;
+    --root-font-weight-medium: 600;
+    --root-font-weight-large: 700;
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+    --bg-intro-desktop: url('images/bg-intro-desktop.png') no-repeat;
+    --bg-intro-mobile: url('images/bg-intro-mobile.png') repeat-y;
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --primary-white: hsl(0, 100%, 100%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neutral-dark-blue: hsl(249, 10%, 26%);
+    --neural-grayish-blue: hsl(246, 25%, 77%);
+    --neural-light-grey: rgb(0, 0, 0, 0.2);
+    --content-box-shadow: 0px 10px 0px 0px var(--neural-light-grey);
+}
+body {
+    font-family: var(--root-font-family);
+    font-size: var(--root-font-size);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background: var(--primary-red) var(--bg-intro-mobile);
+    max-width:  var(--mobile-width);
+    margin: auto;
+    color: var(--primary-white);
+    text-align: center;
+}
+.header-wrapper h1 {
+    font-size: 1.7rem;
+    font-weight: var(--root-font-weight-medium);
+    padding: 5.6rem 4rem 0 4rem;
+}
+.header-wrapper p {
+    padding: 0 2rem;
+}
+.content-wrapper {
+    padding: 1.8rem 2rem 4.4rem;
+}
+.content-wrapper .price {
+    font-size: .95rem;
+    box-shadow: var(--content-box-shadow);
+    background-color: var(--accent-blue);
+    border-radius: 0.8rem;
+}
+.content-wrapper .price p {
+    padding: 1rem 4rem;
+    line-height: 1.7rem;
+    font-weight: var(--root-font-weight-small);
+}
+.content-wrapper .price .highlight {
+    font-weight: var(--root-font-weight-large);
+}
+
+.content-form {
+    margin-top: 2rem;
+    background-color: var(--primary-white);
+    box-shadow: var(--content-box-shadow);
+    border-radius: 0.8rem;
+    padding: 1.6rem 1rem;
+}
+input, button{
+    padding: 1.1rem 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--neural-light-grey);
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    font-weight: var(--root-font-weight-medium);
+    width: 100%;
+}
+.content-form input[type=text]:nth-child(n + 2), button {
+    margin-top: 1rem;
+}
+button {
+    background-color: var(--primary-green);
+    color: var(--primary-white);
+    border: none;
+    border-bottom: 5px solid hsl(154, 66%, 44%);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.content-form .error {
+    display: block;
+    color: var(--primary-red);
+    text-align: right;
+    font-size: 0.6rem;
+    padding-top: 0.2rem;
+}
+.content-form .error-input {
+    border: 1px solid var(--primary-red);
+    background-image: url('images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: 92%;
+}
+.content-form .error-input::placeholder {
+    color: var(--primary-red);
+}
+
+
+.content-wrapper p {
+    font-size: 0.7rem;
+    padding: 0 1rem;
+    line-height: 1.4rem;
+}
+.content-form p span:first-child{
+    color: var(--neutral-dark-blue);
+    opacity: 0.4;
+}
+.content-form p span:last-child {
+    color: var(--primary-red);
+    font-weight: var(--root-font-weight-large);
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        min-width: var(--desktop-width);
+        background: var(--primary-red) var(--bg-intro-desktop);
+        display: flex;
+        align-items: center;
+    }
+    .header-wrapper, .content-wrapper {
+        width: 50%;
+    }
+    .header-wrapper h1, .header-wrapper p {
+        text-align: left;
+        padding: 1rem 5rem 0 10rem;
+    }
+    .header-wrapper h1 {
+        padding-right: 5rem;
+        font-size: 2.8rem;
+        margin: 0;
+        line-height: 3.5rem;
+    }
+    .header-wrapper p {
+        
+        font-size: 0.9rem;
+    }
+    .content-wrapper {
+        padding: 5rem 0;
+    }
+    .content-wrapper .price, .content-wrapper .content-form {
+        margin-right: 10rem;
+    }
+    .content-wrapper p {
+        font-size: 0.9rem;
+    }
+    .content-form {
+        padding: 2rem;
+    }
+    
+}
